@@ -100,7 +100,6 @@ class Button extends Component {
           <TouchableNativeFeedback
             ref={c => (this._root = c)}
             onPress={this.props.onPress}
-            background={this.props.transparent ? TouchableNativeFeedback.Ripple('transparent') : undefined}
             {...this.prepareRootProps()}
           >
             <View {...this.prepareRootProps()}>{children}</View>
