@@ -130,13 +130,20 @@ class PickerNB extends Component {
         onPress={onPress}
       >
         {this.state.currentLabel ? (
-          <Text style={this.props.textStyle} note={this.props.note}>
+          <Text
+            style={this.props.textStyle}
+            note={this.props.note}
+            numberOfLines={this.props.numberOfLines}
+            ellipsizeMode={this.props.ellipsizeMode}
+          >
             {this.state.currentLabel}
           </Text>
         ) : (
           <Text
             style={[this.props.textStyle, this.props.placeholderStyle]}
             note={this.props.note === false ? false : true}
+            numberOfLines={this.props.numberOfLines}
+            ellipsizeMode={this.props.ellipsizeMode}
           >
             {this.props.placeholder}
           </Text>
